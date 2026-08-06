@@ -864,6 +864,9 @@ split-on-trailing-comma = false
 
 [tool.ruff.lint.per-file-ignores]
 
+# Custom components are not part of Core packaging; relax Core-only rules here.
+"custom_components/**" = ["TID251", "D"]
+
 # Allow for main entry & scripts to write to stdout
 "homeassistant/__main__.py" = ["T201"]
 "homeassistant/scripts/*" = ["T201"]
